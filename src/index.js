@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import './_style.scss';
 import { BrowserRouter } from 'react-router-dom';
 import { UserContextProvider } from "./context/UserContext";
 

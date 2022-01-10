@@ -4,8 +4,12 @@ import { Link } from 'react-router-dom'
 import { signOut } from 'firebase/auth'
 import { useNavigate } from 'react-router-dom'
 import { auth } from '../firebase-config'
+import { GiHamburgerMenu } from "react-icons/gi";
+import { FaUserAlt } from 'react-icons/fa'
 
 export default function Navbar() {
+
+  const {currentUser} = useContext(UserContext)
 
   const {toggleModals} = useContext(UserContext)
 
@@ -21,27 +25,27 @@ export default function Navbar() {
   }
 
   return (
-    <nav className="navbar navbar-light bg-light px-4">
-      <Link to="/" className="navbar-brand">
-        AuthJS
-      </Link>
-
-      <div>
-        <button
-        onClick={() => toggleModals("signUp")}
-        className="btn btn-primary">
-          Sign Up
-        </button>
-        <button
-          onClick={() => toggleModals("signIn")}
-        className="btn btn-primary ms-2">
-          Sign In
-        </button>
-        <button
-        onClick={logOut}
-        className="btn btn-danger ms-2">
-          Log Out
-        </button>
+    <nav className="navbar">
+      <div className="container">
+        <div className="col-6 d-flex align-items-center">
+          <span className='navbar-menu__btn' data-bs-toggle="offcanvas" data-bs-target="#sidebar" aria-controls="offcanvasExample"><GiHamburgerMenu /></span>
+          <Link to="/" className="navbar-brand navbar-menu__title">
+            All-in
+          </Link>
+        </div>
+        <div className="col-6 d-flex justify-content-end">
+          <ul className='navbar-list'>
+            <li>
+              <button className='navbar-list__item d-block d-md-none'><FaUserAlt /></button>
+              <button className='navbar-list__item d-none d-md-block' onClick={() => toggleModals("signUp")}>Connexion</button>
+            </li>
+            {currentUser ? "" :
+              <li onClick={logOut}>
+                Deconnexion
+              </li>
+            }
+          </ul>
+        </div>
       </div>
     </nav>
   )

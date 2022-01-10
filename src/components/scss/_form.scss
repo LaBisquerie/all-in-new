@@ -1,0 +1,129 @@
+.header-form {
+  margin-top: 0;
+
+  @include media-breakpoint-down(md) {
+    margin-top: 1.5rem;
+  }
+
+  @include media-breakpoint-up(md) {
+    margin-top: 5rem;
+  }
+}
+
+.product-search {
+  display: flex;
+  align-items: center;
+  background: white;
+  border-radius: 40px;
+  margin: 0 auto;
+  cursor: pointer;
+  max-width: 1000px;
+  padding-left: 1.5rem;
+
+  @include media-breakpoint-down(md) {
+    display: block;
+    padding-left: 2rem;
+    padding-top: 1rem;
+    padding-right: 2rem;
+    padding-bottom: 1rem;
+    width: 90%;
+    background-color: transparent;
+  }
+}
+
+.search-element {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: column;
+  border-right: 1px solid rgba(10,10,10,.1);
+  padding: 1em;
+
+  @include media-breakpoint-down(md) {
+    padding: 1rem;
+    padding-top: .5rem;
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+    border-right: none;
+    border-radius: 5px ;
+    background-color: $white;
+    border-bottom: 1px solid rgba(10,10,10,.1);
+  }
+
+  &:nth-child(3) {
+    border-right: none;
+    width: 20%;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+  }
+
+  @include media-breakpoint-only(md) {
+
+    &:nth-child(1) {
+      width: 70%;
+    }
+
+    &:nth-child(2) {
+      width: 40%;
+    }
+
+    &:nth-child(3) {
+      width: 30%;
+    }
+  }
+}
+
+.search-label {
+  font-weight: 700;
+}
+
+.search-input {
+  border: none;
+  appearance: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.2em;
+  line-height: 1.2em;
+  margin-top: 5px;
+
+  &::placeholder {
+    font-size: 1rem;
+  }
+}
+
+.search-button {
+  font-size: 1.5rem;
+  background-color: $red;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  color: $white;
+  margin-right: 1rem;
+  margin-left: 1rem;
+  flex: 0 0 auto;
+  transition: all .3s ease;
+
+  @include media-breakpoint-down(md) {
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &:hover {
+    transform: scale(1.2);
+    color: $white;
+  }
+}
+
+.search-button__mobile {
+  background: #f54748;
+  padding: 1rem;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 5px;
+  flex: 0 0 auto;
+}
