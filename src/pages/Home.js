@@ -1,5 +1,6 @@
 import React, {useContext} from 'react'
 import { UserContext } from '../context/UserContext'
+import Category from '../components/Category'
 
 export default function Home() {
 
@@ -7,7 +8,7 @@ export default function Home() {
 
   return (
     <div className='container pt-4'>
-      <h1>home page</h1>
+      <Category />
     </div>
   )
 }
