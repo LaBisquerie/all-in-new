@@ -5,6 +5,8 @@ import SignUpModal from "./components/SignUpModal";
 import Private from "./pages/Private/Private";
 import PrivateHome from "./pages/Private/PrivateHome/PrivateHome";
 import Activities from "./pages/Activities";
+import SearchResult from "./pages/SearchResult";
+import Footer from "./components/Footer";
 
 function App() {
 
@@ -18,7 +20,9 @@ function App() {
           <Route path="/private/private-home" element={<PrivateHome />} />
         </Route>
         <Route path="/activities" element={<Activities />} />
+        <Route path="/result" element={<SearchResult />} />
       </Routes>
+      <Footer />
     </>
   );
 }
