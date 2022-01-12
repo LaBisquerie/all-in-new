@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { db } from '../firebase-config'
 import { collection, getDocs, addDoc, deleteDoc, doc } from "firebase/firestore"
 
-export default function Category() {
+export default function Categories() {
 
   const [categories, setcategories] = useState([]);
   const categoriesCollectionRef = collection(db, "categories");

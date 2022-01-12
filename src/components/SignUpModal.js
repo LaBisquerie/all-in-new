@@ -73,7 +73,7 @@ export default function SignUpModal() { // INSCRIPTION
 
               <div className="modal-content">
                 <div className="modal-header">
-                  <h5 className='modal-title'>Sign up</h5>
+                  <h5 className='modal-title'>Inscrivez-vous</h5>
                   <button
                   onClick={() => toggleModals("close")}
                   className='btn-close'></button>
@@ -82,7 +82,7 @@ export default function SignUpModal() { // INSCRIPTION
                 <div className='modal-body'>
                   <form className='sign-up-form' onSubmit={handleForm} ref={formRef}>
                     <div className='mb-3'>
-                      <label htmlFor='signUpEmail' className='form-label'>Email adress</label>
+                      <label htmlFor='signUpEmail' className='form-label'>Adresse mail</label>
                       <input
                       ref={addInputs}
                       name='email'
@@ -93,7 +93,7 @@ export default function SignUpModal() { // INSCRIPTION
                     </div>
 
                     <div className='mb-3'>
-                      <label htmlFor='signUpPwd' className='form-label'>Password</label>
+                      <label htmlFor='signUpPwd' className='form-label'>Mot de passe</label>
                       <input
                       ref={addInputs}
                       name='pwd'
@@ -104,7 +104,7 @@ export default function SignUpModal() { // INSCRIPTION
                     </div>
 
                     <div className='mb-3'>
-                      <label htmlFor='repeatPwd' className='form-label'>Repeat Password</label>
+                      <label htmlFor='repeatPwd' className='form-label'>Repéter le mot de passe</label>
                       <input
                       ref={addInputs}
                       name='pwd'
@@ -115,7 +115,7 @@ export default function SignUpModal() { // INSCRIPTION
                       <p className='text-danger mt-1'>{validation}</p>
                     </div>
 
-                    <button className='btn btn-primary'>Submit</button>
+                    <button className='btn btn-primary'>Valider</button>
                   </form>
                 </div>
               </div>
