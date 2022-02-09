@@ -5,6 +5,7 @@ import Video from './Video'
 import Form from './Form'
 
 export default function Header() {
+
   return (
     <div className='header'>
       <Sidebar />

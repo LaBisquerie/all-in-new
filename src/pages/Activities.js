@@ -27,7 +27,7 @@ export default function Activities() {
   const [newPrice, setNewPrice] = useState(0);
 
   const createActivity = async () => {
-    await addDoc(activitiesCollectionRef, {name: newName, price: newPrice });
+    await addDoc(activitiesCollectionRef, );
   }
 
   /* ========================================== */
